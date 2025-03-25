@@ -1,1 +1,0 @@
-import{_ as t,c as n,b as r,o as a}from"./app-vlpg1qcw.js";const o={};function s(c,e){return a(),n("div",null,e[0]||(e[0]=[r("p",null,"04",-1)]))}const i=t(o,[["render",s]]),d=JSON.parse('{"path":"/jQuery/04event/","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{},"filePathRelative":"jQuery/04event/README.md"}');export{i as comp,d as data};
