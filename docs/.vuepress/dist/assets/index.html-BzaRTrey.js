@@ -1,0 +1,1 @@
+import{_ as t,c as r,b as a,o}from"./app-2nJfhqZ0.js";const n={};function s(c,e){return o(),r("div",null,e[0]||(e[0]=[a("p",null,"简介一下选择器",-1)]))}const d=t(n,[["render",s]]),m=JSON.parse('{"path":"/jQuery/03dom/","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{},"filePathRelative":"jQuery/03dom/README.md"}');export{d as comp,m as data};

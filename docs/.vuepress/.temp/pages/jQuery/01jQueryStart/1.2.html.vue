@@ -1,0 +1,30 @@
+<template><div><h2 id="_1-2-原生-dom-对象与-jquery-对象" tabindex="-1"><a class="header-anchor" href="#_1-2-原生-dom-对象与-jquery-对象"><span>1.2 原生 <code v-pre>DOM</code> 对象与 <code v-pre>jQuery</code> 对象</span></a></h2>
+<h3 id="原生对象的创建" tabindex="-1"><a class="header-anchor" href="#原生对象的创建"><span>原生对象的创建</span></a></h3>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token keyword">var</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line">div<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'Hello World'</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token comment">// 设置class</span></span>
+<span class="line">div<span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">'red'</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token comment">// 通过class 获取dom</span></span>
+<span class="line">document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token keyword">var</span> divs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>divs<span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="jquery对象的创建" tabindex="-1"><a class="header-anchor" href="#jquery对象的创建"><span>jQuery对象的创建</span></a></h3>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token keyword">var</span> div <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'&lt;div>Hello World&lt;/div>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="原生dom对象与jquery对象的转换" tabindex="-1"><a class="header-anchor" href="#原生dom对象与jquery对象的转换"><span>原生<code v-pre>DOM</code>对象与<code v-pre>jQuery</code>对象的转换</span></a></h3>
+<p><code v-pre>jQuery</code>想要获取原⽣的 <code v-pre>DOM</code>对象，可以这样处理</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#box'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token comment">//或者</span></span>
+<span class="line"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#box'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过这个索引0可以看出 <code v-pre>jQuery</code> 是可以进⾏批量处理 <code v-pre>DOM</code> 的，这样可以在很多需要循环遍历的处理上更加得⼼应⼿。</p>
+<p>当然要重新转化成 <code v-pre>jQuery</code> 对象的话，只需要使⽤ <code v-pre>$()</code> 包裹原⽣对象就可以了。</p>
+<p>比如：</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token keyword">var</span> oBox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token function">$</span><span class="token punctuation">(</span>oBox<span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+

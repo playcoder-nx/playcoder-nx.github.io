@@ -1,0 +1,62 @@
+<template><div><h2 id="_3-7-包裹节点" tabindex="-1"><a class="header-anchor" href="#_3-7-包裹节点"><span>3.7 包裹节点</span></a></h2>
+<p>在jQueny中，不仅可以通过方法替换元素节点，还可以根据需求包裹某个指定的节点，对节点的包裹也是 DOM 对象操作中很重要的一项，其与包裹节点相关的全部方法如表 3-4所示。</p>
+<p>表 3-4 包裹节点</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">语法格式</th>
+<th style="text-align:left">参数说明</th>
+<th style="text-align:left">功能描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">wrap(html)</td>
+<td style="text-align:left">参数html表示字符串代码，用于生成元素并包裹所选元素</td>
+<td style="text-align:left">把所有选择的元素用其他字符串代码包裹起来</td>
+</tr>
+<tr>
+<td style="text-align:left">wrap(elem)</td>
+<td style="text-align:left">参数elem表示用于包装所选元素的DOM元素</td>
+<td style="text-align:left">把所有选择的元素用其他 DOM 元素包裹起来</td>
+</tr>
+<tr>
+<td style="text-align:left">wrap(function(index,html))</td>
+<td style="text-align:left">参数function表示一个函数，用于返回包裹结构</td>
+<td style="text-align:left">把所有选择的元素用fnction 函数返回的代码包裹起来</td>
+</tr>
+<tr>
+<td style="text-align:left">unwrap()</td>
+<td style="text-align:left">无参数</td>
+<td style="text-align:left">移除所选元素的父元素或包裹标记</td>
+</tr>
+<tr>
+<td style="text-align:left">wrapAll(html)</td>
+<td style="text-align:left">参数html表示字符串代码，用于生成元素并包裹所选元素</td>
+<td style="text-align:left">把所有选择的元素用单个元素包裹起来</td>
+</tr>
+<tr>
+<td style="text-align:left">wrapAll(elem)</td>
+<td style="text-align:left">参数elem表示用于包装所选元素的DOM元素</td>
+<td style="text-align:left">把所有选择的元素用单个DOM 元素包裹起来</td>
+</tr>
+<tr>
+<td style="text-align:left">wrapInner(html)</td>
+<td style="text-align:left">参数html表示字符串代码，用于生成元素并包裹所选元素</td>
+<td style="text-align:left">把所有选择的元素用单个元素包裹起来</td>
+</tr>
+<tr>
+<td style="text-align:left">wrapInner(elem)</td>
+<td style="text-align:left">参数elem表示用于包装所选元素的DOM元素</td>
+<td style="text-align:left">把所有选择的元素用单个DOM 元素包裹起来</td>
+</tr>
+<tr>
+<td style="text-align:left">wrapInner(fn)</td>
+<td style="text-align:left">参数fn表示一个函数，用于返回包裹结构</td>
+<td style="text-align:left">把所有选择的元素用fnction 函数返回的代码包裹起来</td>
+</tr>
+</tbody>
+</table>
+</div></template>
+
+

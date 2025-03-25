@@ -1,0 +1,149 @@
+<template><div><h1 id="javascript-数字" tabindex="-1"><a class="header-anchor" href="#javascript-数字"><span>JavaScript 数字</span></a></h1>
+<blockquote>
+<p>基于 IEEE 754 标准的双精度 64 位二进制格式的值（-(253 -1) 到 253 -1）。——MDN</p>
+</blockquote>
+<p>在 JavaScript 只有浮点数（可以理解成带有小数点的数）。</p>
+<p>数字就是我们日常使用的数字，在 JavaScript 中默认是十进制的。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token number">10</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token number">1.1</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token number">10.0</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token number">99999999</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span></span>
+<span class="line">代码块<span class="token number">12345678</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>正数（大于零的数）通常不需要在前面带上 <code v-pre>+</code> 号， <code v-pre>+1</code> 和 <code v-pre>1</code> 是等价的。</p>
+<p>使用 <code v-pre>+</code> 号很多情况下是为了把字符串转换成数字：</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token string">'123'</span><span class="token punctuation">;</span></span>
+<span class="line"></span>
+<span class="line">num <span class="token operator">=</span> <span class="token operator">+</span>num<span class="token punctuation">;</span></span>
+<span class="line"></span>
+<span class="line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> <span class="token keyword">typeof</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line">代码块<span class="token number">12345</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>typeof 可以简单理解成返回数据的类型，这里返回的是 <code v-pre>number</code> ，即表示为数字。</p>
+<h2 id="_1-其他进制数字" tabindex="-1"><a class="header-anchor" href="#_1-其他进制数字"><span>1. 其他进制数字</span></a></h2>
+<h3 id="_1-1-二进制" tabindex="-1"><a class="header-anchor" href="#_1-1-二进制"><span>1.1 二进制</span></a></h3>
+<p>使用 <code v-pre>0b</code> 开头的数字，就表示二进制。</p>
+<p>可以在控制台直接输入内容进行调试。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line">0b1012<span class="token punctuation">;</span> <span class="token comment">// 报错，因为二进制只有0与1</span></span>
+<span class="line"></span>
+<span class="line"><span class="token number">0b1111</span><span class="token punctuation">;</span> <span class="token comment">// 15</span></span>
+<span class="line">代码块<span class="token number">123</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-2-八进制" tabindex="-1"><a class="header-anchor" href="#_1-2-八进制"><span>1.2 八进制</span></a></h3>
+<p><code v-pre>0</code> 开头的则为八进制。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token number">09</span><span class="token punctuation">;</span> <span class="token comment">// 控制台输出的9是10进制的，因为八进制中没有9，所以把09解析成了十进制中的9</span></span>
+<span class="line"></span>
+<span class="line"><span class="token number">010</span><span class="token punctuation">;</span> <span class="token comment">// 8</span></span>
+<span class="line">代码块<span class="token number">123</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-3-十六进制" tabindex="-1"><a class="header-anchor" href="#_1-3-十六进制"><span>1.3 十六进制</span></a></h3>
+<p>十六进制用到的相对会多一些，例如在 <code v-pre>three.js</code> 中就会用到大量的使用十六进制表示的颜色。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token number">0xffffff</span><span class="token punctuation">;</span> <span class="token comment">// 用来表示白色</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span class="token number">0xa</span><span class="token punctuation">;</span> <span class="token comment">// 10</span></span>
+<span class="line">代码块<span class="token number">1234</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-4-进制转化" tabindex="-1"><a class="header-anchor" href="#_1-4-进制转化"><span>1.4 进制转化</span></a></h3>
+<p>使用 <code v-pre>toString</code> 方法，在把数字转换成字符串的同时，可以做进制的转换。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "1010"</span></span>
+<span class="line"><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// "10"</span></span>
+<span class="line">代码块<span class="token number">12</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在调用 <code v-pre>toString</code> 的时候，可以给定一个基数作为要转换到的进制，范围是 2 到 36 ，默认为 10 。</p>
+<p>使用 parseInt 方法，也可以实现进制转换。</p>
+<p>如将二进制数 <code v-pre>1010</code> 转换成十进制数字：</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'1010'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 10</span></span>
+<span class="line">代码块<span class="token number">1</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>parseInt 的第二个参数为进制基数，表示第一个参数是几进制的，返回值为 10 进制。</p>
+<h2 id="_2-最大值与最小值" tabindex="-1"><a class="header-anchor" href="#_2-最大值与最小值"><span>2. 最大值与最小值</span></a></h2>
+<p>在 <code v-pre>ES6</code> 中，提供了两个常量 <code v-pre>Number.MAX_SAFE_INTEGER</code> 与 <code v-pre>Number.MIN_SAFE_INTEGER</code> ，可以获得到在 JavaScript 可以表示的最大值与最小值（安全数）。</p>
+<p>安全整数范围为 -（253 - 1）到 253 - 1 之间的整数，包含 -（253 - 1）和 253 - 1 。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span><span class="token constant">MAX_SAFE_INTEGER</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：9007199254740991</span></span>
+<span class="line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Number<span class="token punctuation">.</span><span class="token constant">MIN_SAFE_INTEGER</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：-9007199254740991</span></span>
+<span class="line">代码块<span class="token number">12</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在 ES6 中没必要自己去做比较，可以使用 <code v-pre>Number.isSafeInteger()</code> 方法判断传入的数字是不是一个安全数。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line">Number<span class="token punctuation">.</span><span class="token function">isSafeInteger</span><span class="token punctuation">(</span><span class="token number">11111111111111111111</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// false</span></span>
+<span class="line"></span>
+<span class="line">Number<span class="token punctuation">.</span><span class="token function">isSafeInteger</span><span class="token punctuation">(</span><span class="token number">996</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span></span>
+<span class="line">代码块<span class="token number">123</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_3-0-1-0-2-不等于-0-3问题" tabindex="-1"><a class="header-anchor" href="#_3-0-1-0-2-不等于-0-3问题"><span>3. 0.1 + 0.2 不等于 0.3问题</span></a></h2>
+<p>观察控制台可以看到， <code v-pre>0.1 + 0.2 === 0.3</code> 是不成立的。</p>
+<p><img src="https://img.mukewang.com/wiki/5e7a2ab90a4d084915320432.jpg" alt="图片描述"></p>
+<p>在计算机中，所有的内容都是有二进制表示的，数字也不例外。</p>
+<p>0.1 用二进制表示就是 0.00011001100110011(0011)… 之后就是括号内 0011 的循环。</p>
+<p>而 0.2 采用二进制表示就是0.001100110011(0011)…只有也是 0011 的循环。</p>
+<p>而 <code v-pre>JavaScript</code> 采用的数字规范最大只能操作 64 位的数字，也就是说虽然 <code v-pre>0.1</code> 与 <code v-pre>0.2</code> 表示成二进制是会无限循环的，但是在计算的时候终究要截断。</p>
+<p>其中这 64 位的分布，一位为符号位，整数占据十一位，剩下的五十二位都为小数位。</p>
+<p>这样就可以得到最后参与运算的值：</p>
+<p><code v-pre>0.1</code> =&gt; 2-4 * 1.1001100110011001100110011001100110011001100110011010</p>
+<p><code v-pre>0.2</code> =&gt; 2-3 * 1.1001100110011001100110011001100110011001100110011010</p>
+<p>其实到这里已经可以理解为什么是不一样的了，因为精度的关系，无限循环的小数遭遇了截断，而最终结果是截断后的数据相加获得的，那必定不会再等于<code v-pre>0.3</code>。</p>
+<blockquote>
+<p>注意：这是一个常考的面试题。</p>
+</blockquote>
+<h2 id="_4-infinity" tabindex="-1"><a class="header-anchor" href="#_4-infinity"><span>4. Infinity</span></a></h2>
+<p>Infinity 表示正无限大，也有负无限大 <code v-pre>-Infinity</code> 。</p>
+<p>将 <code v-pre>0</code> 作为除数的时候会得到 <code v-pre>Infinity</code> 。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token number">10</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// Infinity</span></span>
+<span class="line"><span class="token operator">-</span><span class="token number">10</span> <span class="token operator">/</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// -Infinity</span></span>
+<span class="line">代码块<span class="token number">12</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>比较有趣的是，当 <code v-pre>Infinity</code> 作为除数的时候，结果就会是 0 。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token number">10</span> <span class="token operator">/</span> <span class="token number">Infinity</span><span class="token punctuation">;</span> <span class="token comment">// 0</span></span>
+<span class="line"><span class="token number">10</span> <span class="token operator">/</span> <span class="token operator">-</span><span class="token number">Infinity</span><span class="token punctuation">;</span> <span class="token comment">// -0</span></span>
+<span class="line">代码块<span class="token number">12</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_5-nan" tabindex="-1"><a class="header-anchor" href="#_5-nan"><span>5. NaN</span></a></h2>
+<p>NaN 即 <code v-pre>Not A Number</code> ，表示这个值不是一个数字。</p>
+<p><code v-pre>NaN</code> 基本不会被用到，通常会在两种情况下得到：</p>
+<ol>
+<li>计算错误</li>
+<li>将字符串或其他类型转换成数字失败</li>
+</ol>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token number">1</span> <span class="token operator">-</span> <span class="token string">'a'</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span></span>
+<span class="line"></span>
+<span class="line"><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// NaN</span></span>
+<span class="line">代码块<span class="token number">123</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_6-其他小特性" tabindex="-1"><a class="header-anchor" href="#_6-其他小特性"><span>6. 其他小特性</span></a></h2>
+<h3 id="_6-1-0-等于-0" tabindex="-1"><a class="header-anchor" href="#_6-1-0-等于-0"><span>6.1 -0 等于 +0</span></a></h3>
+<p>0 是唯一一个正负相等的数字。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token operator">+</span><span class="token number">0</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// true</span></span>
+<span class="line">代码块<span class="token number">1</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_6-2-nan-不等于-nan" tabindex="-1"><a class="header-anchor" href="#_6-2-nan-不等于-nan"><span>6.2 NaN 不等于 NaN</span></a></h3>
+<p>NaN 是唯一一个自己不等于自己的值。</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token number">NaN</span> <span class="token operator">===</span> <span class="token number">NaN</span><span class="token punctuation">;</span> <span class="token comment">// false</span></span>
+<span class="line">代码块<span class="token number">1</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>根据这一个特性，要判断一个值是不是 NaN 就非常容易：</p>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token keyword">function</span> <span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
+<span class="line">  <span class="token keyword">return</span> val <span class="token operator">!==</span> val<span class="token punctuation">;</span></span>
+<span class="line"><span class="token punctuation">}</span></span>
+<span class="line"></span>
+<span class="line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：false</span></span>
+<span class="line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token number">NaN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出： true</span></span>
+<span class="line">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> <span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：true</span></span>
+<span class="line">代码块<span class="token number">1234567</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_6-3-window-isnan-与-number-isnan" tabindex="-1"><a class="header-anchor" href="#_6-3-window-isnan-与-number-isnan"><span>6.3 window.isNaN 与 Number.isNaN</span></a></h3>
+<p>在 window 下有一个 <code v-pre>isNaN</code> 方法，在 Number 下也有一个 <code v-pre>isNaN</code> 方法。</p>
+<p>这两个方法区别在于， <code v-pre>window.isNaN</code> 会将传入的参数转换成数字，转换结果为 <code v-pre>NaN</code> 就会返回 true ，而后者只有当传入的值确定为 <code v-pre>NaN</code> 的时候，才会返回 true 。</p>
+<p>这两个方法可以根据需求选择。</p>
+<h3 id="_7-小结" tabindex="-1"><a class="header-anchor" href="#_7-小结"><span>7. 小结</span></a></h3>
+<p>在 JavaScript 中，数字都是带有小数位的数，并且范围是有限的。</p>
+<p>因为精度问题，JavaScript 的小数计算并不精确，这是非常需要注意的一点，同时这也是面试中常见的问题。</p>
+<blockquote>
+<p>在新的 ECMAScript 版本中，提供了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt" target="_blank" rel="noopener noreferrer">BigInt</a> 数据类型，可以表示无限大的整数。</p>
+</blockquote>
+</div></template>
+
+
