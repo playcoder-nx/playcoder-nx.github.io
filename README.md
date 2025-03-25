@@ -1,4 +1,4 @@
-环境说明：
+# 环境说明：
 - node version v20.17.0
     "@vuepress/bundler-vite": "^2.0.0-rc.7",
     "@vuepress/theme-default": "^2.0.0-rc.11",
