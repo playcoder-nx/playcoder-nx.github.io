@@ -1,18 +1,7 @@
-# Hi, I'm [Your Name]!
- 
-## About Me
-I'm a software developer with a passion for [technology/field].
- 
-## Skills
-- Language 1
-- Language 2
-- Technology/Framework
- 
-## Projects
-- [Project Name](https://github.com/username/project) - Description of the project.
-- [Another Project](https://github.com/username/another-project) - Description of the project.
- 
-## Contact
-- Email: [your-email@example.com](mailto:your-email@example.com)
-- LinkedIn: [linkedin.com/in/your-username](https://linkedin.com/in/your-username)
-- Twitter: [@your_username](https://twitter.com/your_username)
+环境说明：
+- node version v20.17.0
+    "@vuepress/bundler-vite": "^2.0.0-rc.7",
+    "@vuepress/theme-default": "^2.0.0-rc.11",
+    "sass-embedded": "^1.86.0",
+    "vue": "^3.4.0",
+    "vuepress": "^2.0.0-rc.7"

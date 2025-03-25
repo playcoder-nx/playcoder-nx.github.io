@@ -1,0 +1,1 @@
+import{_ as t,c as r,b as a,o as n}from"./app-2nJfhqZ0.js";const o={};function s(c,e){return n(),r("div",null,e[0]||(e[0]=[a("p",null,"04",-1)]))}const i=t(o,[["render",s]]),d=JSON.parse('{"path":"/jQuery/01jQueryStart/","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{},"filePathRelative":"jQuery/01jQueryStart/README.md"}');export{i as comp,d as data};

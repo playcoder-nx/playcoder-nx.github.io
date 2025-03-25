@@ -1,0 +1,1 @@
+import{_ as e,c as a,b as r,o as s}from"./app-2nJfhqZ0.js";const n={};function o(l,t){return s(),a("div",null,t[0]||(t[0]=[r("p",null,"html css",-1)]))}const m=e(n,[["render",o]]),_=JSON.parse('{"path":"/HTML_CSS/01.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[],"git":{},"filePathRelative":"HTML+CSS/01.md"}');export{m as comp,_ as data};
