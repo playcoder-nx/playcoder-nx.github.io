@@ -1,6 +1,6 @@
-import { CodeTabs } from "E:/vuepress-starter2/node_modules/@vuepress/plugin-markdown-tab/lib/client/components/CodeTabs.js";
-import { Tabs } from "E:/vuepress-starter2/node_modules/@vuepress/plugin-markdown-tab/lib/client/components/Tabs.js";
-import "E:/vuepress-starter2/node_modules/@vuepress/plugin-markdown-tab/lib/client/styles/vars.css";
+import { CodeTabs } from "E:/playcoder-nx.github.io/node_modules/@vuepress/plugin-markdown-tab/lib/client/components/CodeTabs.js";
+import { Tabs } from "E:/playcoder-nx.github.io/node_modules/@vuepress/plugin-markdown-tab/lib/client/components/Tabs.js";
+import "E:/playcoder-nx.github.io/node_modules/@vuepress/plugin-markdown-tab/lib/client/styles/vars.css";
 
 export default {
   enhance: ({ app }) => {

@@ -6,7 +6,7 @@ export default defineUserConfig({
     lang: 'zh-CN',
     title: '银川新华 软件开发课程浏览！',
     description: '这是一个新华教育关于软件开发专业课程介绍的网站，其中介绍了课程相关的内容，欢迎大家进入了解。',
-    base: './', // 使用相对路径，读取相对路径下的静态文件
+    base: '/playcoder-nx/', // 使用相对路径，读取相对路径下的静态文件
     theme: defaultTheme({
         logo: 'https://ycxhdn.com/favicon.ico',
         navbar: [{
